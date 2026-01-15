@@ -132,6 +132,7 @@ p{
 body{
     background-color: #f8fafc;
     color: #373151;
+    overflow-x: hidden;
 }
 .s{
     background-color: #b79f9f;
@@ -202,7 +203,7 @@ body{
   position: sticky;
   height: 60px;
   top: 0;
-  background: linear-gradient(90deg , #1b5e20 , #4caf50);
+  background: linear-gradient(90deg , #1e7f43 , #2ecc71);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,8 +211,8 @@ body{
   z-index: 1000;
 }
 .nav-logo{
-  color: #fff;
-  font-size: 16px;
+  color: #f8f2f2;
+  font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
 }
@@ -219,19 +220,12 @@ body{
   list-style: none;
   display: flex;
   gap: 25px;
-  position: absolute;
-  top: 60px;
-  width: 100%;
-  padding: 10px 0;
-  display: none;
-  flex-direction: column;
-  background: #2e7d32;
 }
 .nav-links li a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
-  padding: 6px 10px;
+  font-size: 20px;
+  padding: 4px 8px;
   border-radius: 6px;
   transition: 0.5s;
 }
@@ -241,6 +235,7 @@ body{
 }
 .hamburger {
   display: none;
+  margin-left: auto;
   flex-direction: column;
   cursor: pointer;
   position: absolute;
@@ -260,14 +255,30 @@ body{
     display: flex;
   }
 .nav-links{
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #2e7d32;
-  }
+  left: 0;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 160px;
+  width: 100%;
+  background: #2e7d32;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 999;
+  padding: 10px 0;
+  border-radius: 50%;
+}
 .nav-links.active{
    display: flex;
   }
+.nav-links li {
+    margin: 8px 0;
+  }
+.nav-links a {
+  font-size: 14px;
+}
 }
 html{
   scroll-behavior: smooth;
@@ -275,4 +286,3 @@ html{
 section{
   scroll-margin-top: 70px;
 }
-
